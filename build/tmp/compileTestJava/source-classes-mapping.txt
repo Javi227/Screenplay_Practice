@@ -1,0 +1,12 @@
+com/sophossolutions/runners/DemoScreenplay.java
+ com.sophossolutions.runners.DemoScreenplay
+com/sophossolutions/userinterfaces/HomePageYourLogo.java
+ com.sophossolutions.userinterfaces.HomePageYourLogo
+com/sophossolutions/tasks/BuscarVestido.java
+ com.sophossolutions.tasks.BuscarVestido
+com/sophossolutions/steps/DemoScreenplayStepDefinitions.java
+ com.sophossolutions.steps.DemoScreenplayStepDefinitions
+com/sophossolutions/userinterfaces/EveningDresses.java
+ com.sophossolutions.userinterfaces.EveningDresses
+com/sophossolutions/tasks/AgregarVestidoACarrito.java
+ com.sophossolutions.tasks.AgregarVestidoACarrito

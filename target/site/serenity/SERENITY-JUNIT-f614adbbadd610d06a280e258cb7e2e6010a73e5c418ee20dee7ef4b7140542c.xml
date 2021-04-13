@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Automation practice Screenplay" skipped="0" tests="1" time="24.02" timestamp="2021-04-12 10:38:59"><testcase name="Buscar vestido"><failure message="&#13;&#10;Expected: &quot;1&quot;&#13;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">&#13;
+Expected: "1"&#13;
+     but: was ""</failure><system-err>&#13;
+Expected: "1"&#13;
+     but: was ""&#13;
+com.sophossolutions.steps.DemoScreenplayStepDefinitions.validoQueElVestidoSeaAgregadoAlCarritoDeCompras(DemoScreenplayStepDefinitions.java:39)&#13;
+✽.Valido que el vestido sea agregado al carrito de compras(src/test/com/sophossolutions/resources/features/demo_screenplay.feature:9)&#13;
+</system-err></testcase></testsuite>
