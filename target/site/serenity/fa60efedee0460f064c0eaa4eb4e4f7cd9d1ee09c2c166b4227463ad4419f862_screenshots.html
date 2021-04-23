@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automatizacion Web</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="96482012a65279e4a846ea2d8ee7c3d4f2c09ce1083bf91b0ccd41c8a24c4405.html">Automatizacion De Registro Web</a></span>
+                > <span class="truncate-60"><a
+                    href="fa60efedee0460f064c0eaa4eb4e4f7cd9d1ee09c2c166b4227463ad4419f862.html"> </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 22-04-2021 08:36</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Automatizacion De Registro Web</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como usuario de la pagina
+necesito realizar el registro
+para agilizar el proceso de registro
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given "Usuario" accede a la url de la web<br>When Agrego informacion solicitada<br><table class='embedded'><thead><th>firsName</th><th>&lt;firsName&gt;</th></thead><tbody><tr><td>lastName</td><td>&lt;lastName&gt;</td></tr><tr><td>email</td><td>&lt;email&gt;</td></tr><tr><td>mothDay</td><td>&lt;mothDay&gt;</td></tr><tr><td>dayBirth</td><td>&lt;dayBirth&gt;</td></tr><tr><td>yearBirth</td><td>&lt;yearBirth&gt;</td></tr><tr><td>languages</td><td>&lt;languages&gt;</td></tr><tr><td>city</td><td>&lt;city&gt;</td></tr><tr><td>postalCode</td><td>&lt;postalCode&gt;</td></tr><tr><td>country</td><td>&lt;country&gt;</td></tr><tr><td>computer</td><td>&lt;computer&gt;</td></tr><tr><td>version</td><td>&lt;version&gt;</td></tr><tr><td>language</td><td>&lt;language&gt;</td></tr><tr><td>mobile</td><td>&lt;mobile&gt;</td></tr><tr><td>model</td><td>&lt;model&gt;</td></tr><tr><td>system</td><td>&lt;system&gt;</td></tr></tbody></table><br>Then Valida que este en la pagina dos</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element not interactable exception: element not interactable</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.ElementNotInteractableException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.sophossolutions.tasks.IngresarDevices.performAs(IngresarDevices.java:26)<br />com.sophossolutions.steps.automatizacionWebStepDefinitions.agregoInformacionSolicitada(automatizacionWebStepDefinitions.java:33)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource7181670199100149664.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="1ecf078b18298b3b70909ff28f505ab0f74a608104ef14d06cf6421b18a19634.png" title=" Example: {firsName=Juan, lastName=Tenorio, email=jtenor@example.com, mothDay=February, dayBirth=27, yearBirth=1993, languages=Spanish, city=Bello, postalCode=050044, country=Colombia, computer=Windows, version=10, language=Spanish, mobile=Xiaomi, model=Redmi Note9, system=Android 10}" width="1366"/>
+                <img src="1ecf078b18298b3b70909ff28f505ab0f74a608104ef14d06cf6421b18a19634.png" title=" Given &quot;Usuario&quot; accede a la url de la web" width="1366"/>
+                <img src="1ecf078b18298b3b70909ff28f505ab0f74a608104ef14d06cf6421b18a19634.png" title=" Usuario opens the Home page" width="1366"/>
+                <img src="87f24497c609ba186727d04907ebe0122f9fe8e9f7e02124e79089c776beabb9.png" title=" Usuario ingresar" width="1366"/>
+                <img src="87f24497c609ba186727d04907ebe0122f9fe8e9f7e02124e79089c776beabb9.png" title=" Usuario clicks on Ingresar" width="1366"/>
+                <img src="5be8b97bd779aa6594fcabaca2ceb056ebfced0d5987757a6490b145f7adfb0d.png" title=" Usuario clicks on Ingresar (completed)" width="1366"/>
+                <img src="5be8b97bd779aa6594fcabaca2ceb056ebfced0d5987757a6490b145f7adfb0d.png" title=" Usuario ingresar (completed)" width="1366"/>
+                <img src="8e9b6d4a3576b0f9ac3956ddd2b8266239fc0bfb4da541ab2fbfc53d371822c5.png" title=" Given &quot;Usuario&quot; accede a la url de la web (completed)" width="1366"/>
+                <img src="8e9b6d4a3576b0f9ac3956ddd2b8266239fc0bfb4da541ab2fbfc53d371822c5.png" title=" When Agrego informacion solicitada
+| firsName | Juan |
+| lastName | Tenorio |
+| email | jtenor@example.com |
+| mothDay | February |
+| dayBirth | 27 |
+| yearBirth | 1993 |
+| languages | Spanish |
+| city | Bello |
+| postalCode | 050044 |
+| country | Colombia |
+| computer | Windows |
+| version | 10 |
+| language | Spanish |
+| mobile | Xiaomi |
+| model | Redmi Note9 |
+| system | Android 10 |" width="1366"/>
+                <img src="e9b700c988309897b15cfdcb31a7d4980b1c2cd6ae7e54fa2bd3ab48bd8eb17c.png" title=" Usuario ingresar informacion" width="1366"/>
+                <img src="8e9b6d4a3576b0f9ac3956ddd2b8266239fc0bfb4da541ab2fbfc53d371822c5.png" title=" Usuario enters 'Juan' into Ingreso nombre" width="1366"/>
+                <img src="5fac6594894db3803690a7bf49aaff8f6382ea5e1189c3c9328582b417336f90.png" title=" Usuario enters 'Juan' into Ingreso nombre (completed)" width="1366"/>
+                <img src="5fac6594894db3803690a7bf49aaff8f6382ea5e1189c3c9328582b417336f90.png" title=" Usuario enters 'Tenorio' into Ingreso apellido" width="1366"/>
+                <img src="4096486e8a9ab922a4b3ac94ce5624bc3ee45948fb90afa98055a6699e8b4228.png" title=" Usuario enters 'Tenorio' into Ingreso apellido (completed)" width="1366"/>
+                <img src="4096486e8a9ab922a4b3ac94ce5624bc3ee45948fb90afa98055a6699e8b4228.png" title=" Usuario enters 'jtenor@example.com' into Ingreso correo" width="1366"/>
+                <img src="821f7bc4264cbdca5fa7b3456a01ffbbb710dfe40048914237fcec0065718da2.png" title=" Usuario enters 'jtenor@example.com' into Ingreso correo (completed)" width="1366"/>
+                <img src="821f7bc4264cbdca5fa7b3456a01ffbbb710dfe40048914237fcec0065718da2.png" title=" Usuario select February on Ingreso mes cumplea&ntilde;os" width="1366"/>
+                <img src="c8b7b922865686cafcc7673537660c23130dd23309507ebcc24ef67f5fc0b8f4.png" title=" Usuario select February on Ingreso mes cumplea&ntilde;os (completed)" width="1366"/>
+                <img src="c8b7b922865686cafcc7673537660c23130dd23309507ebcc24ef67f5fc0b8f4.png" title=" Usuario select 27 on Ingreso dia cumplea&ntilde;os" width="1366"/>
+                <img src="6278d041014196648eafd6cdd38353eee6298aef26460b13a196cd80e269b092.png" title=" Usuario select 27 on Ingreso dia cumplea&ntilde;os (completed)" width="1366"/>
+                <img src="6278d041014196648eafd6cdd38353eee6298aef26460b13a196cd80e269b092.png" title=" Usuario select 1993 on Ingreso a&ntilde;o de nacimiento" width="1366"/>
+                <img src="54365499ee87ea23481f3d3142573d253c344a2e9303a36298a86904fc4ff6c2.png" title=" Usuario select 1993 on Ingreso a&ntilde;o de nacimiento (completed)" width="1366"/>
+                <img src="54365499ee87ea23481f3d3142573d253c344a2e9303a36298a86904fc4ff6c2.png" title=" Usuario enters 'Spanish' then hits [ENTER] into Ingreso idioma" width="1366"/>
+                <img src="d398ef2fee995d3bc196088266f963a200cd22f7ab8f265af7cb1132395943e6.png" title=" Usuario enters 'Spanish' then hits [ENTER] into Ingreso idioma (completed)" width="1366"/>
+                <img src="d398ef2fee995d3bc196088266f963a200cd22f7ab8f265af7cb1132395943e6.png" title=" Usuario clicks on Continuo ingreso" width="1366"/>
+                <img src="8ec6615e0ca0dfee3a72afb856e6371fc101b73bd9b8d7c653d02c4cefa27a43.png" title=" Usuario clicks on Continuo ingreso (completed)" width="1366"/>
+                <img src="8ec6615e0ca0dfee3a72afb856e6371fc101b73bd9b8d7c653d02c4cefa27a43.png" title=" Usuario ingresar informacion (completed)" width="1366"/>
+                <img src="aff9ed2a1c057f6f8c586d9b1d3f175c29019538a742976467225c0bc258cb3b.png" title=" Usuario ingresar address" width="1366"/>
+                <img src="b1199a37958b7a7e4c5616e924710c364f513e3d7f3a13e13aa14caa26189c7a.png" title=" Usuario enters 'Bello' into Ingresar ciudad" width="1366"/>
+                <img src="91e018e572eefa435310db162658947631f21b3dc4f2b5ba78f24e98ab7a4d46.png" title=" Usuario enters 'Bello' into Ingresar ciudad (completed)" width="1366"/>
+                <img src="91e018e572eefa435310db162658947631f21b3dc4f2b5ba78f24e98ab7a4d46.png" title=" Usuario enters '050044' into Ingresar Cod. Postal" width="1366"/>
+                <img src="f46fa1d66ffe84021a020e9a6f26c67955c2ca8772b1130f9dfbb78fddde78fe.png" title=" Usuario enters '050044' into Ingresar Cod. Postal (completed)" width="1366"/>
+                <img src="f46fa1d66ffe84021a020e9a6f26c67955c2ca8772b1130f9dfbb78fddde78fe.png" title=" Usuario enters 'Colombia' then hits [ENTER] into Ingresar Ciudad" width="1366"/>
+                <img src="68096e285a5f65b5b0fd80636d1eb2323b29a48fd692b7f9a25e1c8e1b6c7495.png" title=" Usuario enters 'Colombia' then hits [ENTER] into Ingresar Ciudad (completed)" width="1366"/>
+                <img src="68096e285a5f65b5b0fd80636d1eb2323b29a48fd692b7f9a25e1c8e1b6c7495.png" title=" Usuario clicks on Continuar" width="1366"/>
+                <img src="fc872696b4561c7ff23b24ab2c53bedf82b1d95fbcaeea7fbb771c5d72641688.png" title=" Usuario clicks on Continuar (completed)" width="1366"/>
+                <img src="fc872696b4561c7ff23b24ab2c53bedf82b1d95fbcaeea7fbb771c5d72641688.png" title=" Usuario ingresar address (completed)" width="1366"/>
+                <img src="fc872696b4561c7ff23b24ab2c53bedf82b1d95fbcaeea7fbb771c5d72641688.png" title=" Usuario ingresar devices" width="1366"/>
+                <img src="1fdb9d54feedfb009d7df0f78df8e148172ac544b7187fb6c80704263f28b5b1.png" title=" Usuario enters 'Windows' then hits [TAB] into Ingrese su PC" width="1366"/>
+                <img src="1fdb9d54feedfb009d7df0f78df8e148172ac544b7187fb6c80704263f28b5b1.png" title=" Usuario enters 'Windows' then hits [TAB] into Ingrese su PC (completed): <span class='error-color'>ERROR</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.0</span>
+</div>
+</body>
+</html>

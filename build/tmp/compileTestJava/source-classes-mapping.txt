@@ -1,0 +1,4 @@
+com/sophossolutions/runners/automatizacionWeb.java
+ com.sophossolutions.runners.automatizacionWeb
+com/sophossolutions/steps/automatizacionWebStepDefinitions.java
+ com.sophossolutions.steps.automatizacionWebStepDefinitions
